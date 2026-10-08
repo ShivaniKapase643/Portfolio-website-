@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shivani Kapase | Full Stack Developer & AI Enthusiast</title>
+  <meta name="description" content="Portfolio of Shivani Kapase — Computer Engineering student, Full Stack Developer, AI enthusiast building real-world projects.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="site-loader" id="siteLoader">
+  <div class="loader-shell" aria-hidden="true">
+    <div class="loader-ring"></div>
+    <strong>Loading</strong>
+    <div class="loader-dots"><span></span><span></span><span></span></div>
+  </div>
+</div>
+
+<div class="cursor-glow" aria-hidden="true"></div>
+<canvas class="particle-canvas" aria-hidden="true"></canvas>
+
+<header id="navbar">
+  <a href="#home" class="logo">SK<span class="logo-dot">.</span></a>
+  <nav id="mainNav">
+    <a href="#home" class="nav-link active">Home</a>
+    <a href="#about" class="nav-link">About</a>
+    <a href="#skills" class="nav-link">Skills</a>
+    <a href="#projects" class="nav-link">Projects</a>
+    <a href="#education" class="nav-link">Education</a>
+    <a href="Certificate.html" class="nav-link">Certs</a>
+    <a href="#contact" class="nav-link">Contact</a>
+  </nav>
+  <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero-bg-blobs" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+  <div class="hero-content reveal">
+    <div class="hero-badge"><span class="badge-dot"></span>Available for opportunities</div>
+    <h1 class="hero-title">Hi, I'm <span class="gradient-text">Shivani Kapase</span></h1>
+    <div class="hero-roles">
+      <span class="role-text" data-roles='["Full Stack Developer","AI/ML Enthusiast","Backend Engineer","Problem Solver","React Developer"]'>Full Stack Developer</span>
+    </div>
+    <p class="hero-desc">Computer Engineering student at Wadia College of Engineering, Pune. I build scalable web apps, AI-powered platforms, and real-world solutions that matter.</p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn btn-primary"><i class="fas fa-rocket"></i> View Projects</a>
+      <a href="shivani kapase(resume).pdf" download class="btn btn-outline"><i class="fas fa-download"></i> Resume</a>
+      <a href="#contact" class="btn btn-ghost"><i class="fas fa-paper-plane"></i> Let's Talk</a>
+    </div>
+    <div class="hero-socials">
+      <a href="https://github.com/ShivaniKapase643" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/shivani-kapse-54b513309" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:shivanikapse755@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+    </div>
+  </div>
+  <div class="hero-stats reveal">
+    <div class="stat-item"><span class="stat-num" data-count="20">0</span><span>+</span><span class="stat-label">Projects</span></div>
+    <div class="stat-divider"></div>
+    <div class="stat-item"><span class="stat-num" data-count="7">0</span><span>+</span><span class="stat-label">Certificates</span></div>
+    <div class="stat-divider"></div>
+    <div class="stat-item"><span class="stat-num" data-count="96">0</span><span>%</span><span class="stat-label">SGPA Score</span></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-inner">
+    <div class="section-label reveal">About Me</div>
+    <h2 class="section-title reveal">Who I Am</h2>
+    <div class="about-grid">
+      <div class="about-text-col reveal">
+        <p>I'm a passionate Computer Engineering student at <strong>Wadia College of Engineering, Pune</strong>, currently in my 3rd year with a SGPA of <strong>9.6</strong>. My core focus is backend development, DSA, and building AI-powered real-world projects.</p>
+        <p>I love turning complex ideas into clean, functional applications — from hackathon builds like <strong>SmartShetakari</strong> to production-grade AI platforms like <strong>GreenChain</strong> and <strong>HireProAI</strong>.</p>
+        <div class="about-tags">
+          <span class="tag">Backend Dev</span><span class="tag">AI / ML</span><span class="tag">Full Stack</span>
+          <span class="tag">DSA</span><span class="tag">Open Source</span><span class="tag">Hackathons</span>
+        </div>
+      </div>
+      <div class="about-cards-col">
+        <div class="about-info-card reveal reveal-right">
+          <div class="info-icon"><i class="fas fa-graduation-cap"></i></div>
+          <div><h4>B.E. Computer Engineering</h4><p>Wadia College of Engineering, Pune<br>SGPA: 9.6 (2nd Year Completed)</p></div>
+        </div>
+        <div class="about-info-card reveal reveal-right" style="--reveal-delay:80ms">
+          <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div><h4>Pune, Maharashtra</h4><p>Open to remote & on-site roles</p></div>
+        </div>
+        <div class="about-info-card reveal reveal-right" style="--reveal-delay:160ms">
+          <div class="info-icon"><i class="fas fa-code"></i></div>
+          <div><h4>Focus Areas</h4><p>Backend Engineering · AI/ML · MERN Stack · DSA</p></div>
+        </div>
+        <div class="about-info-card reveal reveal-right" style="--reveal-delay:240ms">
+          <div class="info-icon"><i class="fas fa-trophy"></i></div>
+          <div><h4>Achievements</h4><p>Hackathon Finalist · 7+ Certifications · 20+ Projects</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="section-inner">
+    <div class="section-label reveal">Technical Skills</div>
+    <h2 class="section-title reveal">What I Work With</h2>
+    <div class="skills-grid">
+      <div class="skill-category reveal">
+        <div class="skill-cat-icon"><i class="fas fa-layer-group"></i></div>
+        <h3>Frontend</h3>
+        <div class="skill-pills"><span class="skill-pill">React.js</span><span class="skill-pill">Next.js</span><span class="skill-pill">TypeScript</span><span class="skill-pill">HTML5</span><span class="skill-pill">CSS3 / Tailwind</span><span class="skill-pill">Vite</span></div>
+      </div>
+      <div class="skill-category reveal" style="--reveal-delay:70ms">
+        <div class="skill-cat-icon"><i class="fas fa-server"></i></div>
+        <h3>Backend</h3>
+        <div class="skill-pills"><span class="skill-pill">Node.js</span><span class="skill-pill">Express.js</span><span class="skill-pill">FastAPI</span><span class="skill-pill">Python</span><span class="skill-pill">REST APIs</span><span class="skill-pill">WebSockets</span></div>
+      </div>
+      <div class="skill-category reveal" style="--reveal-delay:140ms">
+        <div class="skill-cat-icon"><i class="fas fa-database"></i></div>
+        <h3>Databases</h3>
+        <div class="skill-pills"><span class="skill-pill">MongoDB</span><span class="skill-pill">MySQL</span><span class="skill-pill">PostgreSQL</span><span class="skill-pill">Supabase</span><span class="skill-pill">Redis</span></div>
+      </div>
+      <div class="skill-category reveal" style="--reveal-delay:210ms">
+        <div class="skill-cat-icon"><i class="fas fa-brain"></i></div>
+        <h3>AI / ML</h3>
+        <div class="skill-pills"><span class="skill-pill">Google Gemini</span><span class="skill-pill">LangChain</span><span class="skill-pill">Scikit-learn</span><span class="skill-pill">NLP</span><span class="skill-pill">RandomForest</span><span class="skill-pill">KMeans</span></div>
+      </div>
+      <div class="skill-category reveal" style="--reveal-delay:280ms">
+        <div class="skill-cat-icon"><i class="fas fa-code"></i></div>
+        <h3>Languages</h3>
+        <div class="skill-pills"><span class="skill-pill">JavaScript</span><span class="skill-pill">Python</span><span class="skill-pill">Java</span><span class="skill-pill">C / C++</span><span class="skill-pill">PHP</span><span class="skill-pill">TypeScript</span></div>
+      </div>
+      <div class="skill-category reveal" style="--reveal-delay:350ms">
+        <div class="skill-cat-icon"><i class="fas fa-tools"></i></div>
+        <h3>Tools & DevOps</h3>
+        <div class="skill-pills"><span class="skill-pill">Git / GitHub</span><span class="skill-pill">Docker</span><span class="skill-pill">GitHub Actions</span><span class="skill-pill">Vercel / Netlify</span><span class="skill-pill">VS Code</span><span class="skill-pill">Android Studio</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-inner">
+    <div class="section-label reveal">My Work</div>
+    <h2 class="section-title reveal">Projects</h2>
+    <p class="section-desc reveal">Real-world projects built from scratch — AI platforms, full-stack apps, and hackathon solutions.</p>
+    <div class="project-filters reveal">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="ai">AI / ML</button>
+      <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+      <button class="filter-btn" data-filter="hackathon">Hackathon</button>
+    </div>
+    <div class="projects-grid" id="projectsGrid">
+
+      <article class="project-card featured" data-category="ai fullstack">
+        <div class="project-badge">Featured</div>
+        <div class="project-card-header">
+          <div class="project-icon"><i class="fas fa-leaf"></i></div>
+          <div class="project-links"><a href="https://github.com/ShivaniKapase643/GreenChain" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a></div>
+        </div>
+        <h3>GreenChain</h3>
+        <p class="project-type">AI Green Logistics & Sustainability Platform</p>
+        <p class="project-desc">Real-time sustainability intelligence for logistics fleets. Monitors carbon footprint per shipment, grades drivers using 7 ML models, and uses Google Gemini AI copilot to recommend decarbonization actions — built with React 19, FastAPI, and Supabase.</p>
+        <div class="project-tech-stack"><span>React 19</span><span>TypeScript</span><span>FastAPI</span><span>Gemini AI</span><span>Supabase</span><span>Python ML</span></div>
+      </article>
+
+      <article class="project-card featured" data-category="ai fullstack">
+        <div class="project-badge">Featured</div>
+        <div class="project-card-header">
+          <div class="project-icon"><i class="fas fa-user-tie"></i></div>
+          <div class="project-links"><a href="https://github.com/ShivaniKapase643/HireProAi" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a></div>
+        </div>
+        <h3>HireProAI</h3>
+        <p class="project-type">AI-Powered Placement Preparation Platform</p>
+        <p class="project-desc">End-to-end placement prep for college students. Features AI mock interviews with NLP evaluation, ATS resume analyzer, Kanban job tracker, and personalized career roadmaps powered by Google Gemini. Built with React 18, Node.js, MongoDB, and Socket.io.</p>
+        <div class="project-tech-stack"><span>React 18</span><span>Node.js</span><span>MongoDB</span><span>Gemini AI</span><span>Tailwind</span><span>Socket.io</span></div>
+      </article>
+
+      <article class="project-card" data-category="hackathon fullstack">
+        <div class="project-badge">Hackathon</div>
+        <div class="project-card-header">
+          <div class="project-icon"><i class="fas fa-seedling"></i></div>
+          <div class="project-links"><a href="https://github.com/ShivaniKapase643/SmartShetakari" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a></div>
+        </div>
+        <h3>SmartShetakari</h3>
+        <p class="project-type">Pune Agri Hackathon — AgriTech App</p>
+        <p class="project-desc">Agricultural technology solution built for the Pune Agri Hackathon. Provides real-time intelligent farming insights to help farmers make data-driven decisions using React Native and Expo.</p>
+        <div class="project-tech-stack"><span>React Native</span><span>Expo</span><span>Node.js</span><span>MongoDB</span></div>
+      </article>
+
+      <article class="project-card" data-category="ai">
+        <div class="project-card-header">
+          <div class="project-icon"><i class="fas fa-tractor"></i></div>
+          <div class="project-links"><a href="https://github.com/ShivaniKapase643/AgroVisionAi" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a></div>
+        </div>
+        <h3>AgroVisionAI</h3>
+        <p class="project-type">AI Vision for Agriculture</p>
+        <p class="project-desc">AI-powered crop health monitoring using computer vision. Provides smart farming recommendations through ML models analyzing visual data from fields.</p>
+        <div class="project-tech-stack"><span>Python</span><span>AI/ML</span><span>Computer Vision</span></div>
+      </article>
+
+      <article class="project-card" data-category="ai fullstack">
+        <div class="project-card-header">
+          <div class="project-icon"><i class="fas fa-film"></i></div>
+          <div class="project-links"><a href="https://github.com/ShivaniKapase643/MoviesRecomendationSystem" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a></div>
+        </div>
+        <h3>Movie Recommendation System</h3>
+        <p class="project-type">AI Movie Discovery Engine</p>
+        <p class="project-desc">Intelligent recommendation system using a 5000+ movie dataset with collaborative filtering, web scraping from multiple sources, and ML-based user preference prediction.</p>
+        <div class="project-tech-stack"><span>Python</span><span>Machine Learning</span><span>Web Scraping</span><span>Pandas</span></div>
+      </article>
+
+      <article class="project-card" data-category="fullstack">
+        <div class="project-card-header">
+          <div class="project-icon"><i class="fas fa-star"></i></div>
+          <div class="project-links"><a href="https://github.com/ShivaniKapase643/Store_Rating_App" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a></div>
+        </div>
+        <h3>Store Rating App</h3>
+        <p class="project-type">Full Stack Rating & Review Platform</p>
+        <p class="project-desc">Full-stack store rating application with user authentication, store management, rating submission, and an admin analytics dashboard with secure REST API.</p>
+        <div class="project-tech-stack"><span>JavaScript</span><span>Node.js</span><span>MongoDB</span><span>React</span></div>
+      </article>
+
+    </div>
+    <div class="projects-grid" id="projectsGridRow2">
+
+      <article class="project-card" data-category="fullstack ai">
+        <div class="project-card-header">
+          <div class="project-icon"><i class="fas fa-hospital"></i></div>
+          <div class="project-links"><a href="https://github.com/ShivaniKapase643/Smart_Healthcare_Appointment" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a></div>
+        </div>
+        <h3>Smart Healthcare Appointment</h3>
+        <p class="project-type">AI Medical Booking System</p>
+        <p class="project-desc">Intelligent healthcare appointment booking with smart scheduling, doctor-patient management, and AI-assisted recommendations for medical appointments.</p>
+        <div class="project-tech-stack"><span>JavaScript</span><span>Node.js</span><span>MongoDB</span><span>React</span></div>
+      </article>
+
+      <article class="project-card" data-category="ai">
+        <div class="project-card-header">
+          <div class="project-icon"><i class="fas fa-city"></i></div>
+          <div class="project-links"><a href="https://github.com/ShivaniKapase643/CivicTwin-AI" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a></div>
+        </div>
+        <h3>CivicTwin AI</h3>
+        <p class="project-type">AI Digital Twin for Civic Infrastructure</p>
+        <p class="project-desc">AI-powered digital twin platform for civic infrastructure simulation. Enables smart city admins to model and predict urban outcomes using AI analytics.</p>
+        <div class="project-tech-stack"><span>AI/ML</span><span>Python</span><span>Digital Twin</span></div>
+      </article>
+
+      <article class="project-card" data-category="ai">
+        <div class="project-card-header">
+          <div class="project-icon"><i class="fas fa-podcast"></i></div>
+          <div class="project-links"><a href="https://github.com/ShivaniKapase643/Ai_Podcast_Generator" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a></div>
+        </div>
+        <h3>AI Podcast Generator</h3>
+        <p class="project-type">Text-to-Podcast AI Platform</p>
+        <p class="project-desc">Converts written content into engaging podcast audio using NLP and text-to-speech models, automating podcast creation from articles or blog posts.</p>
+        <div class="project-tech-stack"><span>JavaScript</span><span>AI/ML</span><span>TTS</span><span>Node.js</span></div>
+      </article>
+
+      <article class="project-card" data-category="fullstack">
+        <div class="project-card-header">
+          <div class="project-icon"><i class="fas fa-robot"></i></div>
+          <div class="project-links"><a href="https://github.com/ShivaniKapase643/NextGenAiPlatform" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a></div>
+        </div>
+        <h3>NextGen AI Platform</h3>
+        <p class="project-type">Premium AI SaaS Landing Page</p>
+        <p class="project-desc">Premium AI SaaS landing page with matrix-driven multi-currency pricing, responsive bento-grid layout, and native CSS/WAAPI animations — zero external animation libraries.</p>
+        <div class="project-tech-stack"><span>TypeScript</span><span>CSS/WAAPI</span><span>Semantic HTML</span></div>
+      </article>
+
+      <article class="project-card" data-category="fullstack">
+        <div class="project-card-header">
+          <div class="project-icon"><i class="fas fa-utensils"></i></div>
+          <div class="project-links"><a href="https://github.com/ShivaniKapase643/Pre-Meal-Planner-WEB" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a></div>
+        </div>
+        <h3>Pre-Meal Planner</h3>
+        <p class="project-type">Student Attendance & Meal Tracking App</p>
+        <p class="project-desc">Web app for tracking student pre-meal plans and attendance with admin panel, student records management, and a reporting dashboard.</p>
+        <div class="project-tech-stack"><span>JavaScript</span><span>Node.js</span><span>MongoDB</span></div>
+      </article>
+
+      <article class="project-card" data-category="fullstack">
+        <div class="project-card-header">
+          <div class="project-icon"><i class="fas fa-school"></i></div>
+          <div class="project-links"><a href="https://github.com/ShivaniKapase643/Student-detention-project" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a></div>
+        </div>
+        <h3>Student Detention System</h3>
+        <p class="project-type">Desktop Application — PHP & MySQL</p>
+        <p class="project-desc">Desktop app for managing student detention lists with student records, detention tracking, report generation, and admin features.</p>
+        <div class="project-tech-stack"><span>PHP</span><span>MySQL</span><span>Desktop App</span></div>
+      </article>
+
+    </div>
+    <div class="projects-more reveal">
+      <a href="https://github.com/ShivaniKapase643" target="_blank" rel="noopener noreferrer" class="btn btn-outline"><i class="fab fa-github"></i> View All on GitHub</a>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="section-inner">
+    <div class="section-label reveal">My Journey</div>
+    <h2 class="section-title reveal">Education</h2>
+    <div class="timeline">
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"><i class="fas fa-graduation-cap"></i></div>
+        <div class="timeline-card">
+          <div class="timeline-period">2024 — 2027</div>
+          <h3>B.E. in Computer Engineering</h3>
+          <p class="timeline-org">Modern Education Society's Wadia College of Engineering, Pune</p>
+          <p>2nd year completed — <strong>SGPA: 9.6</strong></p>
+          <div class="timeline-tags"><span>MERN Stack</span><span>AI/ML</span><span>DSA</span><span>DBMS</span></div>
+        </div>
+      </div>
+      <div class="timeline-item reveal" style="--reveal-delay:100ms">
+        <div class="timeline-dot"><i class="fas fa-building-columns"></i></div>
+        <div class="timeline-card">
+          <div class="timeline-period">2021 — 2024</div>
+          <h3>Diploma in Computer Engineering</h3>
+          <p class="timeline-org">Government Residence Women's Polytechnic, Tasgaon</p>
+          <p>Graduated with <strong>90.40%</strong> — Maharashtra State Board (MSBTE)</p>
+          <div class="timeline-tags"><span>Java</span><span>Android</span><span>MySQL</span><span>C/C++</span></div>
+        </div>
+      </div>
+      <div class="timeline-item reveal" style="--reveal-delay:200ms">
+        <div class="timeline-dot"><i class="fas fa-school"></i></div>
+        <div class="timeline-card">
+          <div class="timeline-period">2021</div>
+          <h3>SSC — 10th Grade</h3>
+          <p class="timeline-org">Siddheshwar High School Pimparad</p>
+          <p>Scored <strong>91.60%</strong> — Maharashtra State Board</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXTRA ACTIVITIES -->
+<section id="activities">
+  <div class="section-inner">
+    <div class="section-label reveal">Beyond Code</div>
+    <h2 class="section-title reveal">Extra Activities</h2>
+    <div class="activities-grid">
+      <div class="activity-card reveal">
+        <div class="activity-icon"><i class="fas fa-trophy"></i></div>
+        <h3>Hackathons</h3>
+        <p>Participated and built impactful projects in Pune Agri Hackathon and multiple national-level competitions, delivering working prototypes under tight deadlines.</p>
+      </div>
+      <div class="activity-card reveal" style="--reveal-delay:100ms">
+        <div class="activity-icon"><i class="fas fa-certificate"></i></div>
+        <h3>Certifications</h3>
+        <p>Certified in C, C++, Java, JavaScript, VB.NET, Data Structures — both state and national level from Sunbeam Institute and others.</p>
+        <a href="Certificate.html" class="activity-link">View All Certs <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="activity-card reveal" style="--reveal-delay:200ms">
+        <div class="activity-icon"><i class="fas fa-users"></i></div>
+        <h3>Collaboration</h3>
+        <p>Active contributor to team projects. Co-built HireProAI as part of Team TwinTech, demonstrating strong teamwork on production-scale AI platforms.</p>
+      </div>
+      <div class="activity-card reveal" style="--reveal-delay:300ms">
+        <div class="activity-icon"><i class="fas fa-book-open"></i></div>
+        <h3>Continuous Learning</h3>
+        <p>Actively practicing DSA on LeetCode and exploring new domains — from blockchain sustainability to AI-driven healthcare systems.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-inner">
+    <div class="section-label reveal">Get In Touch</div>
+    <h2 class="section-title reveal">Let's Work Together</h2>
+    <p class="section-desc reveal">Open to internships, collaborations, and interesting projects. Feel free to reach out!</p>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+          <div><span class="contact-label">Email</span><a href="mailto:shivanikapse755@gmail.com" class="contact-value">shivanikapse755@gmail.com</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fas fa-phone"></i></div>
+          <div><span class="contact-label">Phone</span><a href="tel:+919370446447" class="contact-value">+91 9370446447</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div><span class="contact-label">Location</span><span class="contact-value">Pune, Maharashtra, India</span></div>
+        </div>
+        <div class="contact-socials">
+          <a href="https://github.com/ShivaniKapase643" target="_blank" rel="noopener noreferrer" class="social-btn"><i class="fab fa-github"></i> GitHub</a>
+          <a href="https://www.linkedin.com/in/shivani-kapse-54b513309" target="_blank" rel="noopener noreferrer" class="social-btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+          <a href="shivani kapase(resume).pdf" download class="social-btn"><i class="fas fa-file-pdf"></i> Resume</a>
+        </div>
+      </div>
+      <form class="contact-form reveal reveal-right" id="contactForm" novalidate>
+        <div class="form-group">
+          <label for="contactName">Name</label>
+          <input type="text" id="contactName" name="name" placeholder="Your Name" required autocomplete="name">
+        </div>
+        <div class="form-group">
+          <label for="contactEmail">Email</label>
+          <input type="email" id="contactEmail" name="email" placeholder="your@email.com" required autocomplete="email">
+        </div>
+        <div class="form-group">
+          <label for="contactSubject">Subject</label>
+          <input type="text" id="contactSubject" name="subject" placeholder="What's this about?">
+        </div>
+        <div class="form-group">
+          <label for="contactMsg">Message</label>
+          <textarea id="contactMsg" name="message" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary form-submit"><i class="fas fa-paper-plane"></i> Send Message</button>
+        <p class="form-note" id="formNote" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="logo">SK<span class="logo-dot">.</span></span>
+      <p>Built with passion by Shivani Kapase</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+      <a href="Certificate.html">Certificates</a>
+    </nav>
+    <p class="footer-copy">&copy; 2025 Shivani Kapase · All Rights Reserved</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

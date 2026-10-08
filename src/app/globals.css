@@ -1,0 +1,376 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+/* ── Light theme ─────────────────────────────────────────────────────────── */
+:root {
+  --paper: #f6f5f1;
+  --paper-raised: #ffffff;
+  --paper-elevated: #efede7;
+  --ink: #14161b;
+  --ink-soft: #464b58;
+  --ink-faint: #656a79;
+  --line: rgba(20, 22, 27, 0.1);
+  --line-strong: rgba(20, 22, 27, 0.2);
+  --accent: #b0521a;
+  --accent-strong: #8c3f11;
+  --accent-tint: rgba(176, 82, 26, 0.1);
+  --accent-contrast: #fffaf3;
+  --accent-2: #4f5bd5;
+  --glow: rgba(176, 82, 26, 0.16);
+  --glow-2: rgba(79, 91, 213, 0.12);
+  --grid-dot: rgba(20, 22, 27, 0.14);
+  --shadow-color: 20 22 27;
+}
+
+/* ── Dark theme (default) ────────────────────────────────────────────────── */
+:root[data-theme="dark"] {
+  --paper: #0b0c10;
+  --paper-raised: #111318;
+  --paper-elevated: #171a21;
+  --ink: #eceef3;
+  --ink-soft: #a6acb9;
+  --ink-faint: #7d8392;
+  --line: rgba(236, 238, 243, 0.08);
+  --line-strong: rgba(236, 238, 243, 0.16);
+  --accent: #f2a65a;
+  --accent-strong: #f8c088;
+  --accent-tint: rgba(242, 166, 90, 0.12);
+  --accent-contrast: #1a1007;
+  --accent-2: #8b98ff;
+  --glow: rgba(242, 166, 90, 0.15);
+  --glow-2: rgba(139, 152, 255, 0.12);
+  --grid-dot: rgba(236, 238, 243, 0.09);
+  --shadow-color: 0 0 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0b0c10;
+    --paper-raised: #111318;
+    --paper-elevated: #171a21;
+    --ink: #eceef3;
+    --ink-soft: #a6acb9;
+    --ink-faint: #7d8392;
+    --line: rgba(236, 238, 243, 0.08);
+    --line-strong: rgba(236, 238, 243, 0.16);
+    --accent: #f2a65a;
+    --accent-strong: #f8c088;
+    --accent-tint: rgba(242, 166, 90, 0.12);
+    --accent-contrast: #1a1007;
+    --accent-2: #8b98ff;
+    --glow: rgba(242, 166, 90, 0.15);
+    --glow-2: rgba(139, 152, 255, 0.12);
+    --grid-dot: rgba(236, 238, 243, 0.09);
+    --shadow-color: 0 0 0;
+  }
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-paper-raised: var(--paper-raised);
+  --color-paper-elevated: var(--paper-elevated);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-faint: var(--ink-faint);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-accent-tint: var(--accent-tint);
+  --color-accent-contrast: var(--accent-contrast);
+  --color-accent-2: var(--accent-2);
+  --font-display: var(--font-display);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+  --shadow-soft: 0 1px 2px rgb(var(--shadow-color) / 0.08), 0 8px 24px -12px rgb(var(--shadow-color) / 0.35);
+  --shadow-lift: 0 2px 6px rgb(var(--shadow-color) / 0.1), 0 24px 48px -20px rgb(var(--shadow-color) / 0.55);
+  --animate-float: float 7s ease-in-out infinite;
+  --animate-drift: drift 22s ease-in-out infinite alternate;
+  --animate-drift-slow: drift 30s ease-in-out infinite alternate-reverse;
+}
+
+* {
+  border-color: var(--line);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+  /* Keeps width stable when dialogs lock scrolling. */
+  scrollbar-gutter: stable;
+  color-scheme: light;
+  -webkit-text-size-adjust: 100%;
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  text-rendering: optimizeLegibility;
+  overflow-x: clip;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-contrast);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--paper);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--line-strong);
+  border-radius: 999px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* ── Utilities ───────────────────────────────────────────────────────────── */
+
+.skip-link {
+  position: fixed;
+  left: 1rem;
+  top: -4rem;
+  z-index: 100;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  background: var(--accent);
+  color: var(--accent-contrast);
+  font-weight: 600;
+  transition: top 0.2s ease;
+}
+.skip-link:focus {
+  top: 1rem;
+}
+
+.glass {
+  background: color-mix(in oklab, var(--paper-raised) 74%, transparent);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  backdrop-filter: blur(16px) saturate(140%);
+}
+
+.dot-grid {
+  background-image: radial-gradient(var(--grid-dot) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.line-grid {
+  background-image:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* Faint film grain over the whole page. No blend mode: cheaper to composite. */
+.grain {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Thin gradient border that fades in on hover/focus. */
+.ring-gradient {
+  position: relative;
+  isolation: isolate;
+}
+.ring-gradient::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, var(--accent), transparent 38%, transparent 62%, var(--accent-2));
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+.ring-gradient:hover::before,
+.ring-gradient:focus-within::before {
+  opacity: 1;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.text-pretty {
+  text-wrap: pretty;
+}
+
+.font-feature-tab {
+  font-variant-numeric: tabular-nums;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Animated dashes along the project flow diagrams. */
+.flow-dash {
+  stroke-dasharray: 4 6;
+  animation: dash 1.6s linear infinite;
+}
+
+/* Hero entrance: pure CSS so the copy paints before hydration (better LCP)
+   and still animates without JavaScript. Delay comes from --d. */
+.enter-up {
+  animation: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: var(--d, 0s);
+}
+.enter-left {
+  animation: fade-left 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: var(--d, 0s);
+}
+.enter-rise {
+  animation: rise 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: var(--d, 0s);
+}
+.enter-fade {
+  animation: fade-in 0.8s ease both;
+  animation-delay: var(--d, 0s);
+}
+.scroll-dot {
+  animation: scroll-dot 1.8s ease-in-out infinite;
+}
+
+/* ── Keyframes ───────────────────────────────────────────────────────────── */
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fade-left {
+  from {
+    opacity: 0;
+    transform: translate3d(24px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes rise {
+  from {
+    transform: translate3d(0, 105%, 0);
+  }
+  to {
+    transform: none;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scroll-dot {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(10px);
+    opacity: 0.3;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -10px, 0);
+  }
+}
+
+@keyframes drift {
+  0% {
+    transform: translate3d(-4%, -2%, 0) scale(1);
+  }
+  100% {
+    transform: translate3d(5%, 4%, 0) scale(1.12);
+  }
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: -20;
+  }
+}
+
+/* ── Native <dialog> ─────────────────────────────────────────────────────── */
+
+dialog.app-dialog {
+  max-width: none;
+  max-height: none;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  overflow: hidden;
+}
+dialog.app-dialog::backdrop {
+  background: transparent;
+}
+
+html.scroll-locked {
+  overflow: hidden;
+}
+
+/* ── Reduced motion ──────────────────────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
